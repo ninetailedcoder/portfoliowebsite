@@ -6,19 +6,29 @@ import project1 from '../img/project1.png'
 import project2 from '../img/project2.png'
 import {Field,Formik,Form} from 'formik'
 import resume from '../assets/Tory_DeMaio_Resume.pdf'
+import {Typewriter} from 'react-simple-typewriter';
+
 
 const HomePage = () => {
 
+
     return(
         <Container>
-            <h1>Hi I'm Tory DeMaio. <br/>Im a Full stack Developer</h1>
+            <Row style={{ display: 'flex', justifyContent: 'center' }}>
+                <h1>
+                    <Typewriter
+                            words={['Hello my name is Tory DeMaio \n and I\'m a Full Stack Developer!']}
+                    >
+                    </Typewriter>
+                </h1>
+            </Row>
             <Row>
                 <Col>
                     <Navigation/>
                 </Col>
             </Row>
-            <Row className="d-flex justify-content-between">
-                <Col>
+            <Row className="d-flex justify-content-between" style={{ marginTop: '100px' }}>
+                <Col style={{marginBottom: '40px'}}>
                     <h2 id="about">About Me</h2>
                     <p>I've had a passion for technology since a young age and have been involved with it since I was 8 years old. I gained experience in the technology industry by working in a Helpdesk position for three years. However, I've recently decided to make a transition into software development. Over the last year, I've been self-taught and have completed a boot-camp program to further my knowledge and skills. In doing so I found that I love building responsive and dynamic web experiences that include innovative solutions. but I’m not afraid to dabble in other areas of the tech stack including backend services and mobile apps. My ultimate goal is to work for a company that creates apps and technology that have the potential to change the world by providing innovative solutions. I'm enthusiastic about using my skills and knowledge to contribute to such a company's mission and vision.</p>
                 </Col>
@@ -28,21 +38,21 @@ const HomePage = () => {
                 </Col>
             </Row>
             <Row id="projects">
-                <Col>
+                <Col style={{marginBottom: '50px'}}>
                     <Card style={{ backgroundImage: `url(${project1})`, backgroundSize: "cover", height: "300px", position: "relative" }}>
                         <Card.Body style={{ position: "absolute", bottom: "0", width: "100%" }}>
                         <Button onClick={() => window.open('https://twincitiesrelief-react-version.web.app/', '_blank')}>Live Demo</Button>
                         </Card.Body>
                     </Card>
                 </Col>
-                <Col>
+                <Col style={{marginTop: '45px'}}>
                     <h3>Twin Cities Relief Initiative</h3>
                     <p>This is a mock site that I created for a local nonprofit. The site was created based on their style as well as some feedback from the nonprofit founder. The site was created with the following tech stack
                     HTML5,CSS, Javascript,Bootstrap,React, and deployed using the Google Cloud Platform. This project showcases my understanding of web development as well as web design.</p>
                 </Col>
             </Row>
-            <Row>
-                <Col>
+            <Row style={{marginBottom: '50px'}}>
+                <Col style={{marginTop: '55px'}}>
                     <h3>Nucamp: A Better Way To Camp</h3>
                     <p>A Single page web application version of my Nucamp website. This version was built with the following stack
                     Html, CSS, JavaScript, React strap, React, Redux, Node.js, and deployed on Google Cloud Platform.</p>

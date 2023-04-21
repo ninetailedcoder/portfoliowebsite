@@ -32,6 +32,17 @@ h1 {
   font-family: 'Alfa Slab One', cursive;
 }
 
+body {
+  background-color: #333;
+}
+
+h2 {
+  color: black;
+}
+
+p {
+  color: black;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -40,3 +51,57 @@ h1 {
     transform: rotate(360deg);
   }
 }
+
+.navbar-custom {
+  background-color: black;
+  animation: fadeInDown 1s;
+  border-radius: 10px;
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h1 {
+  font-size: 3rem;
+  color: black;
+}
+
+h3 {
+  color: black;
+}
+
+label {
+  color: black;
+}
+
+.ReactTypist {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.ReactTypist .Cursor {
+  display: inline-block;
+  opacity: 1;
+  animation: blink 1s linear infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
