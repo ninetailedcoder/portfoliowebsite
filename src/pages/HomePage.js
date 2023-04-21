@@ -33,15 +33,14 @@ const HomePage = () => {
                     <p>I've had a passion for technology since a young age and have been involved with it since I was 8 years old. I gained experience in the technology industry by working in a Helpdesk position for three years. However, I've recently decided to make a transition into software development. Over the last year, I've been self-taught and have completed a boot-camp program to further my knowledge and skills. In doing so I found that I love building responsive and dynamic web experiences that include innovative solutions. but I’m not afraid to dabble in other areas of the tech stack including backend services and mobile apps. My ultimate goal is to work for a company that creates apps and technology that have the potential to change the world by providing innovative solutions. I'm enthusiastic about using my skills and knowledge to contribute to such a company's mission and vision.</p>
                 </Col>
                 <Col className="d-flex align-self-center justify-content-around">
-                    <Button><a style={{color: 'white'}} href={resume} download>Resume/CV</a></Button>
-
+                    <Button className="button-style"><a href={resume} download>Resume/CV</a></Button>
                 </Col>
             </Row>
             <Row id="projects">
                 <Col style={{marginBottom: '50px'}}>
                     <Card style={{ backgroundImage: `url(${project1})`, backgroundSize: "cover", height: "300px", position: "relative" }}>
                         <Card.Body style={{ position: "absolute", bottom: "0", width: "100%" }}>
-                        <Button onClick={() => window.open('https://twincitiesrelief-react-version.web.app/', '_blank')}>Live Demo</Button>
+                        <Button className="button-style" onClick={() => window.open('https://twincitiesrelief-react-version.web.app/', '_blank')}>Live Demo</Button>
                         </Card.Body>
                     </Card>
                 </Col>
@@ -60,7 +59,7 @@ const HomePage = () => {
                 <Col>
                     <Card style={{ backgroundImage: `url(${project2})`, backgroundSize: 'cover', height: "300px", position: "relative" }}>
                     <Card.Body style={{ position: "absolute", bottom: "0", width: "100%" }}>
-                        <Button onClick={() => window.open('https://react-deploy-test-379819.web.app/', '_blank')}>Live Demo</Button>
+                        <Button className="button-style" onClick={() => window.open('https://react-deploy-test-379819.web.app/', '_blank')}>Live Demo</Button>
                     </Card.Body>
                     </Card>
                 </Col>

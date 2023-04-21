@@ -28,6 +28,10 @@
   color: #61dafb;
 }
 
+.nav-link {
+  color: #664EAE;
+}
+
 h1 {
   font-family: 'Alfa Slab One', cursive;
 }
@@ -37,11 +41,11 @@ body {
 }
 
 h2 {
-  color: black;
+  color: #664EAE;
 }
 
 p {
-  color: black;
+  color: #664EAE;
 }
 @keyframes App-logo-spin {
   from {
@@ -75,11 +79,11 @@ h1 {
 }
 
 h3 {
-  color: black;
+  color: #664EAE;
 }
 
 label {
-  color: black;
+  color: #664EAE;
 }
 
 .ReactTypist {
@@ -103,5 +107,10 @@ label {
   100% {
     opacity: 1;
   }
+}
+
+.button-style {
+  background-color: #1A0554;
+  color: white;
 }
 
