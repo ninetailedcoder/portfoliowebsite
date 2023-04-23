@@ -7,14 +7,14 @@ import project2 from '../img/project2.png'
 import {Field,Formik,Form} from 'formik'
 import resume from '../assets/Tory_DeMaio_Resume.pdf'
 import {Typewriter} from 'react-simple-typewriter';
+import SlidingRows from "../components/slideingRows";
 
 
 const HomePage = () => {
-
-
+    
     return(
         <Container>
-            <Row style={{ display: 'flex', justifyContent: 'center' }}>
+            <Row style={{ display: 'flex', justifyContent: 'center', zIndex: 1}}>
                 <h1>
                     <Typewriter
                             words={['Hello my name is Tory DeMaio \n and I\'m a Full Stack Developer!']}
@@ -27,16 +27,19 @@ const HomePage = () => {
                     <Navigation/>
                 </Col>
             </Row>
-            <Row className="d-flex justify-content-between" style={{ marginTop: '100px' }}>
-                <Col style={{marginBottom: '40px'}}>
-                    <h2 id="about">About Me</h2>
-                    <p>I've had a passion for technology since a young age and have been involved with it since I was 8 years old. I gained experience in the technology industry by working in a Helpdesk position for three years. However, I've recently decided to make a transition into software development. Over the last year, I've been self-taught and have completed a boot-camp program to further my knowledge and skills. In doing so I found that I love building responsive and dynamic web experiences that include innovative solutions. but I’m not afraid to dabble in other areas of the tech stack including backend services and mobile apps. My ultimate goal is to work for a company that creates apps and technology that have the potential to change the world by providing innovative solutions. I'm enthusiastic about using my skills and knowledge to contribute to such a company's mission and vision.</p>
-                </Col>
-                <Col className="d-flex align-self-center justify-content-around">
-                    <Button className="button-style"><a href={resume} download>Resume/CV</a></Button>
-                </Col>
-            </Row>
-            <Row id="projects">
+            <SlidingRows animationDelay={0.5} direction='left' >
+                <Row className="d-flex justify-content-between animate-slide-right" style={{ marginTop: '100px' }}>
+                        <Col style={{marginBottom: '40px'}}>
+                            <h2 id="about">About Me</h2>
+                            <p>I've had a passion for technology since a young age and have been involved with it since I was 8 years old. I gained experience in the technology industry by working in a Helpdesk position for three years. However, I've recently decided to make a transition into software development. Over the last year, I've been self-taught and have completed a boot-camp program to further my knowledge and skills. In doing so I found that I love building responsive and dynamic web experiences that include innovative solutions. but I’m not afraid to dabble in other areas of the tech stack including backend services and mobile apps. My ultimate goal is to work for a company that creates apps and technology that have the potential to change the world by providing innovative solutions. I'm enthusiastic about using my skills and knowledge to contribute to such a company's mission and vision.</p>
+                        </Col>
+                    <Col className="d-flex align-self-center justify-content-around">
+                        <Button className="button-style"><a href={resume} download>Resume/CV</a></Button>
+                    </Col>
+                </Row>
+            </SlidingRows>
+            <SlidingRows animationDelay={0.8} direction='left'>
+            <Row id="projects" className="slide-in-right">
                 <Col style={{marginBottom: '50px'}}>
                     <Card style={{ backgroundImage: `url(${project1})`, backgroundSize: "cover", height: "300px", position: "relative" }}>
                         <Card.Body style={{ position: "absolute", bottom: "0", width: "100%" }}>
@@ -50,6 +53,8 @@ const HomePage = () => {
                     HTML5,CSS, Javascript,Bootstrap,React, and deployed using the Google Cloud Platform. This project showcases my understanding of web development as well as web design.</p>
                 </Col>
             </Row>
+            </SlidingRows>
+            <SlidingRows animationDelay={0.8} direction='right'>
             <Row style={{marginBottom: '50px'}}>
                 <Col style={{marginTop: '55px'}}>
                     <h3>Nucamp: A Better Way To Camp</h3>
@@ -64,6 +69,7 @@ const HomePage = () => {
                     </Card>
                 </Col>
             </Row>
+            </SlidingRows>
             <Row id="contact">
                 <Col className="contactformhead rounded" xs='12'>
                     <h2>Get in touch with me</h2>
