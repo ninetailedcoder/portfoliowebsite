@@ -8,6 +8,7 @@ import {Field,Formik,Form} from 'formik'
 import resume from '../assets/Tory_DeMaio_Resume.pdf'
 import {Typewriter} from 'react-simple-typewriter';
 import SlidingRows from "../components/slideingRows";
+import ResetFormButton from "../components/resetFormButton";
 
 
 const HomePage = () => {
@@ -144,7 +145,7 @@ const HomePage = () => {
                     </FormGroup>
                     <FormGroup row>
                     <Col md={{size: 10, offset: 2}} className='d-flex justify-items-start'>
-                        <Button type='submit' color="primary">Send Message</Button>
+                        <ResetFormButton />
                     </Col>
                     </FormGroup>
                 </Form>
