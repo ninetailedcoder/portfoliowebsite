@@ -167,6 +167,44 @@ body {
   opacity: 0.9;
 }
 
+.logo-img {
+  width: 100px; /* Adjust the width to the desired size */
+  height: auto; /* Maintain the aspect ratio */
+  background-color: transparent;
+
+}
+
+ul.skills-list {
+  list-style: none; /* Remove the default bullet points */
+  padding: 0; /* Remove any default padding */
+  margin: 0; /* Remove any default margin */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+@media (min-width: 992px) { /* Large screens - 2 rows of 5 items */
+  ul.skills-list {
+    flex-wrap: wrap;
+  }
+  ul.skills-list li {
+    flex-basis: 48%;
+    margin-bottom: 10px;
+  }
+}
+
+
+@media (max-width: 991px) { /* Smaller screens - 4 rows with 3 items in the first 3 rows and one item in the last row alone */
+  li {
+    width: 31.33%;
+    margin-bottom: 10px;
+  }
+  li:nth-child(10) {
+    width: 100%;
+  }
+}
+
+
 @keyframes wave {
   2% {
       transform: translateX(1);
