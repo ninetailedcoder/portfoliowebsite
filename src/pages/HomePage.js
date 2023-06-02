@@ -5,7 +5,7 @@ import Navigation from "../components/Navigation"
 import project1 from '../img/project1.png'
 import project2 from '../img/project2.png'
 import {Field,Formik,Form} from 'formik'
-import resume from '../assets/Tory_DeMaio_Resume.pdf'
+import resume from '../assets/Web Developer Resume .pdf'
 import {Typewriter} from 'react-simple-typewriter';
 import SlidingRows from "../components/slideingRows";
 import ResetFormButton from "../components/resetFormButton";
